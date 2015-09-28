@@ -27,9 +27,9 @@ GameObject:
   - 224: {fileID: 22414818}
   - 65: {fileID: 6509626}
   - 23: {fileID: 2396234}
-  - 114: {fileID: 11435346}
   - 222: {fileID: 22242398}
   - 33: {fileID: 3355078}
+  - 114: {fileID: 11482948}
   m_Layer: 0
   m_Name: Tile
   m_TagString: Tile
@@ -137,7 +137,7 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
---- !u!114 &11435346
+--- !u!114 &11482948
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -152,10 +152,10 @@ MonoBehaviour:
   flag: {fileID: 151680, guid: 99fbcd9b63a14d74bbdbe4b777ac81cd, type: 2}
   startMaterial: {fileID: 2100000, guid: dee01d038c0ade345845e56e6605e86c, type: 2}
   zeroReveal:
-    target: {fileID: 147606, guid: 70ad7954f61fadd499ea656624bd3514, type: 2}
-    method: RevealAdjacentZeroes
+    target: {fileID: 0}
+    method: 
     argType: 
-  mapGenerator: {fileID: 147606, guid: 70ad7954f61fadd499ea656624bd3514, type: 2}
+  gameScreen: {fileID: 0}
 --- !u!222 &22242398
 CanvasRenderer:
   m_ObjectHideFlags: 1

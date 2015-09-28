@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Tile : MonoBehaviour {
 	
-	[Range(0, 100)]
+	//[Range(0, 100)]
 	//public float bombChance = 20.0f;
 	
 	public GameObject tile;
@@ -25,7 +25,9 @@ public class Tile : MonoBehaviour {
 	int y;
 	
 	public Signal zeroReveal;
-	public GameObject mapGenerator;//I don't like this at all... 
+	 
+	
+	public GameScreenScript gameScreen;
 	
 	//RaycastHit hit;
 	//Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -163,8 +165,12 @@ public class Tile : MonoBehaviour {
 	{
 		if(!isFlaged)
 		{
-			cloneFlag = Instantiate(flag, new Vector3(transform.position.x - .11f, transform.position.y + .3f, transform.position.z - .05f), Quaternion.Euler(90,0,0)) as GameObject;
-			isFlaged = true;
+			if(!isRevealed)
+			{
+				cloneFlag = Instantiate(flag, new Vector3(transform.position.x - .11f, transform.position.y + .3f, transform.position.z - .05f), Quaternion.Euler(90,0,0)) as GameObject;
+				
+				isFlaged = true;
+			}
 		}
 		else
 		{

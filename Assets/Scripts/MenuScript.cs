@@ -16,6 +16,7 @@ public class MenuScript : MonoBehaviour {
 	
 	
 	public GameObject mapGen;
+	public GameManager gameMan;
 	
 	void Start () 
 	{
@@ -29,7 +30,7 @@ public class MenuScript : MonoBehaviour {
 	
 	public void HelpButtonPressed()
 	{
-		print("FART");
+		//print("FART");
 		titleScreen.enabled = false;
 		helpMenu.enabled = true;
 		
@@ -77,8 +78,9 @@ public class MenuScript : MonoBehaviour {
 	IEnumerator startGameAfterWait(float waitTime, int width, int height, int numBombs)
 	{
 		yield return new WaitForSeconds(waitTime);
-		MapGenerator mgScript = mapGen.GetComponent<MapGenerator>();
-		mgScript.GameStart(width, height, numBombs);
+		//MapGenerator mgScript = mapGen.GetComponent<MapGenerator>();
+		//mgScript.GameStart(width, height, numBombs);
+		gameMan.GameStart (width, height, numBombs);
 		
 		titleScreen.enabled = false;
 	}
